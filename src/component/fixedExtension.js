@@ -6,4 +6,4 @@ const fixedExtension = (props) => {
     return(<div className={styles.fixedExtensionElem}></div>)
 };
 
-export default fixedExtension
+export default fixedExtension;

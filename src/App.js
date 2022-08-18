@@ -1,6 +1,7 @@
+import React from 'react';
 import styles from './App.module.css'
-import customExtension from './component/customExtension';
-import fixedExtension from './component/fixedExtension';
+import CustomExtension from './component/CustomExtension';
+import FixedExtension from './component/FixedExtension';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
               <div className="ext_custom_input_elem_window">
                 <div className="ext_custom_input_elem_count">3/200</div>
                 <div className="ext_custom_input_elems">
+                  <CustomExtension extname="ts"/>
                 </div>
               </div>
             </div>
