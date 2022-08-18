@@ -1,0 +1,24 @@
+.ext_pinned{
+    display: flex;
+}
+
+.ext_custom{
+    display: flex;
+}
+
+div{
+    padding: 5px;
+    border: 1px solid black;
+}
+
+textarea{
+    resize: none;
+}
+
+button{
+    background-color: gray;
+    text-align: center;
+    color: white;
+    border-radius: 3px;
+    border: none;
+}
