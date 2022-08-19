@@ -5,8 +5,7 @@ const CustomExtension = (props) => {
 
     return(
     <div className={styles.customExtensionElem}>
-        {props.extname}
-        <button>\00d7</button>
+        {props.extname}&nbsp;<button className={styles.xbtt}>&#215;</button>
     </div>
     )
 };
