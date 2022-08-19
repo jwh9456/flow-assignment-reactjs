@@ -2,18 +2,9 @@ import React from 'react';
 import styles from './App.module.css'
 import CustomExtension from './component/CustomExtension';
 import PinnedExtension from './component/PinnedExtension';
-import {atom} from 'recoil';
-import axios from 'axios';
 
-const pinnedExtensionList = atom({
-  key: 'pinnedExtensionList',
-  default: []
-});
 
-const customExtensionList = atom({
-  key: 'customExtensionList',
-  default: []
-})
+
 
 function App() {
   return (
