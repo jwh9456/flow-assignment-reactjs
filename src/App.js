@@ -4,7 +4,12 @@ import CustomExtension from './component/CustomExtension';
 import PinnedExtension from './component/PinnedExtension';
 
 
-
+const validateExtInput =(e)=>{
+  if(e.target.value.length >20 ){
+    alert("확장자 길이는 20자를 넘을 수 없습니다.")
+    e.target.value=""
+  }
+}
 
 function App() {
   return (
@@ -24,7 +29,7 @@ function App() {
             <div className="ext_custom_header">커스텀 확장자</div>
             <div className="ext_custom_input_wrapper">
               <div className="ext_custom_input_textarea">
-                <input type='text' placeholder="확장자 입력"/>&nbsp;
+                <input type='text' placeholder="확장자 입력" onChange={validateExtInput}/>&nbsp;
                 <button>+추가</button>
               </div>
               <div className={styles.ext_custom_input_elem_window}>
