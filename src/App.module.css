@@ -1,34 +1,52 @@
-.ext_pinned{
+.ext_pinned {
+    width: 100%;
     display: flex;
 }
 
-.ext_custom{
+.ext_custom {
     display: flex;
 }
 
-div{
-    padding: 5px;
+.App {
+    width: 500px;
+}
+
+.fixedExtensionElem {}
+
+.customExtensionElem {
+    width: min-content;
+    display: flex;
+    border-radius: 3px;
     border: 1px solid black;
 }
 
-textarea{
-    resize: none;
+.ext_custom_input_textarea {
+    display: flex;
 }
 
-button{
+.banner {
+    font-size: 24px;
+    border-bottom: 3px solid;
+}
+
+.xbtt{
+    font-size: 14px;
+    background-color: none;
+}
+.ext_custom_input_elem_window {
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid;
+}
+
+div {
+    padding: 5px;
+}
+
+button {
     background-color: gray;
     text-align: center;
     color: white;
     border-radius: 3px;
     border: none;
-}
-
-.fixedExtensionElem{
-
-}
-
-.customExtensionElem{
-    width: 100%;
-    border-radius: 3px;
-    border: 1px solid black;
 }
