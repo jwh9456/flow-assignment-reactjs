@@ -42,6 +42,7 @@
 }
 
 .ext_pinned_elem {
+    display: flex;
     flex:1;
 }
 
