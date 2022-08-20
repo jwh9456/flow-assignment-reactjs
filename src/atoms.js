@@ -1,11 +1,11 @@
-import {atom} from 'recoil';
+import { atom } from 'recoil';
 
-const pinnedExtensionList = atom({
-    key: 'pinnedExtensionList',
-    default: []
-  });
-  
-  const customExtensionList = atom({
-    key: 'customExtensionList',
-    default: []
-  })
+export const PinnedExtensionList = atom({
+  key: 'pinnedExtensionList',
+  default: ""
+});
+
+export const CustomExtensionList = atom({
+  key: 'customExtensionList',
+  default: ""
+});
