@@ -3,12 +3,10 @@ import styles from './App.module.css'
 import CustomExtension from './component/CustomExtension';
 import PinnedExtension from './component/PinnedExtension';
 import { useRecoilState } from 'recoil';
-import { CustomExtensionList, PinnedExtensionList, addIdValue } from './atoms';
+import { CustomExtensionList, PinnedExtensionList } from './atoms';
 import _ from 'lodash';
 import { getData } from './apiService';
 import { addData } from './apiService';
-
-
 
 const validateExtInput = (e) => {
   if (e.target.value.length > 20) {
@@ -21,7 +19,6 @@ function App() {
 
   const [pinExt, setpinExt] = useRecoilState(PinnedExtensionList)
   const [customExt, setcustomExt] = useRecoilState(CustomExtensionList)
-  // const [bigId,setBigId] = useRecoilState(addIdValue)
 
   useEffect(() => {
     (async () => {
@@ -29,26 +26,26 @@ function App() {
       console.log(temp)
       setpinExt(_.filter(temp, { ExtType: "pin" }))
       setcustomExt(_.filter(temp, { ExtType: "custom" }))
-      // setBigId(_.maxBy(temp,'id').id)
     })()
   }, []);
-  console.log(pinExt)
-  console.log(customExt)
-  // console.log(bigId)
 
   const addCustomExt = (param) => {
-    if (_.find(pinExt, { ExtName: param })) {
+    var regex = /[^a-zA-Z]/g
+    if (regex.test(param)) {
+      alert("확장자명은 영문으로 입력해주세요.")
+    }
+    else if (customExt.length >= 200) {
+      alert("커스텀 확장자는 200개를 초과할 수 없습니다.")
+    }
+    else if (_.find(pinExt, { ExtName: param })) {
       alert("중복된 항목 추가 불가")
     }
     else if (_.find(customExt, { ExtName: param })) {
       alert("중복된 항목 추가 불가")
     }
     else {
-      // setBigId(bigId=>bigId+1)
-      // console.log(bigId)
       setcustomExt(customExt => [
         ...customExt,
-        // { id: bigId, ExtName: param, ExtType: 'custom' }
         { id: null, ExtName: param, ExtType: 'custom' }
       ])
       addData(param)
@@ -78,7 +75,7 @@ function App() {
 
               <div className={styles.ext_custom_input_elem_window}>
                 <div className="ext_custom_input_elem_count">{customExt.length}/200</div>
-                <div className="ext_custom_input_elems">
+                <div className={styles.ext_custom_input_elems}>
                   {customExt ? customExt.map((elem) => (<CustomExtension key={elem.id} dbid={elem.id} extname={elem.ExtName} />)) : <div></div>}
                 </div>
               </div>
