@@ -9,13 +9,24 @@
 }
 
 .App {
-    width: 500px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .customExtensionElem {
     width: min-content;
     display: flex;
     border-radius: 3px;
     border: 1px solid black;
+    margin: 3px;
+}
+
+.ext_custom_input_elems {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .ext_custom_input_textarea {
@@ -27,23 +38,24 @@
     border-bottom: 3px solid;
 }
 
-.xbtt{
+.xbtt {
     font-size: 14px;
     background-color: none;
 }
+
 .ext_custom_input_elem_window {
     flex: 1;
     border-radius: 3px;
     border: 1px solid;
 }
 
-.ext_custom_input_wrapper{
-    flex:1;
+.ext_custom_input_wrapper {
+    flex: 1;
 }
 
 .ext_pinned_elem {
     display: flex;
-    flex:1;
+    flex: 1;
 }
 
 div {
