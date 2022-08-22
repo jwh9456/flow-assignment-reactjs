@@ -23,7 +23,6 @@ function App() {
   useEffect(() => {
     (async () => {
       const temp = await getData("");
-      console.log(temp)
       setpinExt(_.filter(temp, { ExtType: "pin" }))
       setcustomExt(_.filter(temp, { ExtType: "custom" }))
     })()

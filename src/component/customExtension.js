@@ -8,10 +8,7 @@ const CustomExtension = (props) => {
     const setcustomExt = useSetRecoilState(CustomExtensionList)
 
     var onClickHandler = (param) => {
-        console.log(param)
-
         setcustomExt(CustomExtensionList => CustomExtensionList.filter(customext => customext.ExtName !== param))
-
         delData(param)
     }
 

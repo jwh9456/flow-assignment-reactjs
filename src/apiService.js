@@ -48,8 +48,7 @@ export const putData = (param, bool) => {
                     isChecked: bool
                 }
             ).then(
-                setTimeout(() => window.location.replace("/"), 0)
-
+                setTimeout(() => window.location.replace("/"), 100)
             )
         })
     }
