@@ -42,6 +42,9 @@ function App() {
     else if (_.find(customExt, { ExtName: param })) {
       alert("중복된 항목 추가 불가")
     }
+    else if(param ===  ""){
+      alert("공백 추가 불가")
+    }
     else {
       setcustomExt(customExt => [
         ...customExt,
