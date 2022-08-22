@@ -24,7 +24,7 @@ const PinnedExtension = (props) => {
             // })
             putData(props.extname, true)
         }
-        setTimeout(() => window.location.replace("/"), 100);
+        
     }
 
     return (

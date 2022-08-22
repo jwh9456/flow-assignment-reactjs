@@ -31,7 +31,7 @@ export const addData = (param) => {
             res => res.data >= 207 ?
                 alert("커스텀 확장자는 200개를 초과할 수 없습니다") :
                 (axios.post(apiServiceAgent, { ExtName: param, ExtType: 'custom' }))
-                // 다른 사용자들로 인해 이미 추가된 경우
+            // 다른 사용자들로 인해 이미 추가된 경우
         )
     }
     catch (error) {
@@ -47,7 +47,10 @@ export const putData = (param, bool) => {
                 {
                     isChecked: bool
                 }
-            ).then(console.log("putd"))
+            ).then(
+                setTimeout(() => window.location.replace("/"), 0)
+
+            )
         })
     }
     catch (error) {
